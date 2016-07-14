@@ -1,5 +1,7 @@
-package parrot;
+package com.parrotcorp.parrot;
 
+import com.parrotcorp.parrot.Parrot;
+import com.parrotcorp.parrot.ParrotTypeEnum;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

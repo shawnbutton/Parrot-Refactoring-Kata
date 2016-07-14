@@ -1,4 +1,4 @@
-package parrot;
+package com.parrotcorp.parrot;
 
 public class Parrot {
 
