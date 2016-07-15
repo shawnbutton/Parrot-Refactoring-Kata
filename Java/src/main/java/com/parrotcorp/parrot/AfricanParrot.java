@@ -3,12 +3,9 @@ package com.parrotcorp.parrot;
 
 public class AfricanParrot extends Parrot {
 
-    protected AfricanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(numberOfCoconuts, voltage, isNailed);
-    }
+    protected int numberOfCoconuts = 0;
 
     public AfricanParrot(int numberOfCoconuts) {
-        super();
         this.numberOfCoconuts = numberOfCoconuts;
     }
 
