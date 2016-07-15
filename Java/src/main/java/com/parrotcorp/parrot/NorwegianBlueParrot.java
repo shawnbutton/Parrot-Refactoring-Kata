@@ -5,6 +5,13 @@ public class NorwegianBlueParrot extends Parrot {
         super(numberOfCoconuts, voltage, isNailed);
     }
 
+    public NorwegianBlueParrot(double voltage, boolean isNailed) {
+        super();
+        this.voltage = voltage;
+        this.isNailed = isNailed;
+    }
+
+
     @Override
     public double getSpeed() {
         return (isNailed) ? 0 : getBaseSpeed(voltage);
