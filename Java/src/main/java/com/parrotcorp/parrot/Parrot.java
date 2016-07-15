@@ -11,6 +11,10 @@ public class Parrot {
         this.isNailed = isNailed;
     }
 
+    public Parrot() {
+
+    }
+
     public static Parrot createParrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
         switch(_type) {
             case EUROPEAN:

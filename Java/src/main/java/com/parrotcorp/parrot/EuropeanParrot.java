@@ -6,4 +6,9 @@ public class EuropeanParrot extends Parrot {
     public EuropeanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
         super(numberOfCoconuts, voltage, isNailed);
     }
+
+    public EuropeanParrot() {
+        super();
+    }
+
 }
