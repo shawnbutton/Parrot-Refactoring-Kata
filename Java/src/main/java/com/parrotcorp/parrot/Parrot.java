@@ -1,14 +1,11 @@
 package com.parrotcorp.parrot;
 
 public class Parrot {
-
-    private ParrotTypeEnum type;
     protected int numberOfCoconuts = 0;
-    private double voltage;
-    private boolean isNailed;
+    protected double voltage;
+    protected boolean isNailed;
 
-    protected Parrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
-        this.type = _type;
+    protected Parrot(int numberOfCoconuts, double voltage, boolean isNailed) {
         this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
         this.isNailed = isNailed;
@@ -17,35 +14,21 @@ public class Parrot {
     public static Parrot createParrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
         switch(_type) {
             case EUROPEAN:
-                return new EuropeanParrot(_type, numberOfCoconuts, voltage, isNailed);
+                return new EuropeanParrot(numberOfCoconuts, voltage, isNailed);
             case AFRICAN:
-                return new AfricanParrot(_type, numberOfCoconuts, voltage, isNailed);
+                return new AfricanParrot(numberOfCoconuts, voltage, isNailed);
             case NORWEGIAN_BLUE:
-                return new NorwegianBlueParrot(_type, numberOfCoconuts, voltage, isNailed);
+                return new NorwegianBlueParrot(numberOfCoconuts, voltage, isNailed);
         }
-        return new Parrot(_type, numberOfCoconuts, voltage, isNailed);
-
+        return new Parrot(numberOfCoconuts, voltage, isNailed);
     }
 
     public double getSpeed() {
-        switch(type) {
-            case NORWEGIAN_BLUE:
-                return (isNailed) ? 0 : getBaseSpeed(voltage);
-        }
-        throw new RuntimeException("Should be unreachable");
-    }
-
-    private double getBaseSpeed(double voltage) {
-        return Math.min(24.0, voltage*getBaseSpeed());
-    }
-
+        return getBaseSpeed();
+    };
 
     protected double getBaseSpeed() {
         return 12.0;
     }
 
-
-    public int getNumberOfCoconuts() {
-        return numberOfCoconuts;
-    }
 }
