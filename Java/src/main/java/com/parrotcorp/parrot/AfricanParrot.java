@@ -7,6 +7,11 @@ public class AfricanParrot extends Parrot {
         super(numberOfCoconuts, voltage, isNailed);
     }
 
+    public AfricanParrot(int numberOfCoconuts) {
+        super();
+        this.numberOfCoconuts = numberOfCoconuts;
+    }
+
     @Override
     public double getSpeed() {
         return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
