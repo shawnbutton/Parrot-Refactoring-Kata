@@ -19,7 +19,7 @@ public class Parrot {
             case EUROPEAN:
                 return new EuropeanParrot(_type, numberOfCoconuts, voltage, isNailed);
             case AFRICAN:
-                return new Parrot(_type, numberOfCoconuts, voltage, isNailed);
+                return new AfricanParrot(_type, numberOfCoconuts, voltage, isNailed);
             case NORWEGIAN_BLUE:
                 return new Parrot(_type, numberOfCoconuts, voltage, isNailed);
         }
